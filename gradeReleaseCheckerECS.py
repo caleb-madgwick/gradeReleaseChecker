@@ -44,7 +44,6 @@ def main():
         driver.execute_script("arguments[0].setAttribute('class', 'active')", select)
         course = select.find_element(By.TAG_NAME, "h3")
         grades = select.find_elements(By.CLASS_NAME, "panel-success")
-        print(course.text[0:7] + ": " + str(len(grades)))
         current_grades.append(course.text[0:7] + ": " + str(len(grades)))
 
     grade_path = "~/PycharmProjects/gradeReleaseChecker/ECSgrades2022.txt"
